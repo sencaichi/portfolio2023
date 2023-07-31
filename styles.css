@@ -1,0 +1,146 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("./RobotoMono-Regular.ttf")format('truetype');
+}
+
+:root {
+  --blood-red: #7d0a0a;
+  --jade-green: #418538;
+}
+
+* {
+  padding: auto;
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+  font-family: "Roboto";
+  color: black;
+}
+
+body {
+  font-family: 'Roboto';
+  margin: 0;
+  transition: .5s;
+  padding: 0;
+  /* overflow: hidden; */
+}
+
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#custom-loading-animation {
+  width: 200px;
+  height: 200px;
+  background-image: url('./loading.gif');
+  background-size: 100%;
+  animation: 2s linear infinite;
+}
+
+/* show content after the loading screen is hidden
+#loading-screen:not(:empty) + .content {
+  display: block;
+}
+*/
+
+.container {
+  width: 500px;
+  height: 650px;
+  margin: 100px auto;
+  opacity: 0;
+  animation: fade 2s forwards;
+  border-style: ridge;
+  border-color: lightgray;
+}
+
+@keyframes fade {
+  0% { opacity: 0 }
+  100% { opacity: 1 }
+}
+
+.navbar {
+  display: block;
+  float: right;
+  text-align: justify;
+}
+
+.container-nav-item {
+  display: inline-block;
+  font-weight: bold;
+  border-bottom: 1px solid black;
+}
+
+.nav-item {
+  height: 50%;
+  color: black;
+  width: 50%;
+  text-indent: 6px;
+}
+
+.button {
+  position: relative;
+}
+
+.button:hover .arrow {
+  cursor: crosshair;
+}
+
+.arrow {
+  transition: 0.2s;
+  position: absolute;
+  right: 15px;
+  font-family: "Roboto";
+}
+
+.arrow-unactive {
+  display: none;
+}
+
+.container-top {
+  display: block;
+}
+
+.active {
+  background-color: black;
+}
+
+.active a {
+  color: white;
+}
+
+#about-undertitle {
+  font-family: "Roboto";
+  text-align: justify;
+  color: var(--black);
+  font-weight: bolder;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+
+#about-maintext {
+  font-family: "Roboto";
+  text-align: justify;
+  color: var(--black);
+  margin-bottom: 10px;
+}
+
+#about-undertext {
+  grid-column-start: 2;
+  font-size:2rem;
+  text-align: justify;
+  color: var(--black);
+  font-weight: bold;
+  font-family: "Roboto";
+  margin-bottom: 50px;
+}
