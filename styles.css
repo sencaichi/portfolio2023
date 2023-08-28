@@ -54,9 +54,14 @@ body {
 */
 
 .container {
-  width: 500px;
-  height: 650px;
-  margin: 100px auto;
+  width: 496px;
+  height: 496px;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
   opacity: 0;
   animation: fade 2s forwards;
   border-style: ridge;
@@ -143,4 +148,12 @@ body {
   font-weight: bold;
   font-family: "Roboto";
   margin-bottom: 50px;
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
 }

@@ -57,15 +57,14 @@ root.append(loadingContainer)
 
 window.addEventListener('load', () => {
   setTimeout(() => {
-    loadingContainer.style.display = 'none';
+    loadingContainer.classList.add('hidden');
     root.appendChild(container);
-    container.style.display = 'block';
+    container.classList.add('visible');
   }, 1000);
 })
 
 const addContentOnClicks = () => {
   const content_buttons = document.getElementsByClassName('container-menu-item');
-  console.log(content_buttons);
   Array.from(content_buttons).forEach((element, idx) => {
     element.addEventListener('click', (e) => {
       e.preventDefault();
